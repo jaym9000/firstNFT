@@ -1,0 +1,12 @@
+{
+    "files.watcherExclude": {
+        "**/node_modules/**": true,
+        "**/dist/**": true,
+        "**/.git/**": true
+      },
+      "editor.cursorBlinking": "solid",
+      "editor.smoothScrolling": false,
+      "editor.renderWhitespace": "none",
+      "editor.minimap.enabled": false,
+      "editor.codeLens": false
+}
