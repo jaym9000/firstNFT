@@ -5,18 +5,19 @@ import {Test} from "forge-std/Test.sol";
 import {DeployBasicNft} from "../script/DeployBasicNft.s.sol";
 import {BasicNft} from "../src/BasicNft.sol";
 
-contract BasicNftTest is Test{
+contract BasicNftTest is Test {
     DeployBasicNft public deployer;
     BasicNft public basicNft;
     address public USER = makeAddr("user");
-    string public constant PUG = "ipfs://bafybeicdlctvdhgvhnu5xqjm6tvjzaw3oyllq77deguvllb52hzu3ur76m/?filename=0-PUG.json";
+    string public constant PUG =
+        "ipfs://bafybeicdlctvdhgvhnu5xqjm6tvjzaw3oyllq77deguvllb52hzu3ur76m/?filename=0-PUG.json";
 
     function setUp() public {
         deployer = new DeployBasicNft();
         basicNft = deployer.run();
     }
 
-    function testNameIsCorrect() public  view{
+    function testNameIsCorrect() public view {
         // assertEq(basicNft.name(), "Dogie");
         string memory expectedName = "Dogie";
         string memory actualName = basicNft.name();
